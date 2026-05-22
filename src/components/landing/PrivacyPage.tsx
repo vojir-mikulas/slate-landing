@@ -23,6 +23,7 @@ const SECTION_IDS = [
   "collect",
   "storage",
   "analytics",
+  "integrations",
   "sharing",
   "rights",
   "children",
@@ -205,12 +206,26 @@ export function PrivacyPage({ dict }: PrivacyPageProps) {
           <section id="analytics">
             <SectionHeading num={s.analytics.num} label={s.analytics.label} />
             <p>{s.analytics.p1}</p>
+            <p>{s.analytics.p2}</p>
+          </section>
+
+          <section id="integrations">
+            <SectionHeading
+              num={s.integrations.num}
+              label={s.integrations.label}
+            />
+            <p>{s.integrations.p1}</p>
+            <p>{s.integrations.p2}</p>
+            <p>{s.integrations.p3}</p>
+            <p>{s.integrations.p4}</p>
+            <p>{s.integrations.p5}</p>
           </section>
 
           <section id="sharing">
             <SectionHeading num={s.sharing.num} label={s.sharing.label} />
             <p>{s.sharing.p1}</p>
             <p>{s.sharing.p2}</p>
+            <p>{s.sharing.p3}</p>
           </section>
 
           <section id="rights">
@@ -234,6 +249,7 @@ export function PrivacyPage({ dict }: PrivacyPageProps) {
           <section id="changes">
             <SectionHeading num={s.changes.num} label={s.changes.label} />
             <p>{s.changes.p1}</p>
+            <p>{s.changes.p2}</p>
           </section>
 
           <div className="priv__contact">
@@ -241,6 +257,8 @@ export function PrivacyPage({ dict }: PrivacyPageProps) {
               <strong>{t.contact.title}</strong>
               <br />
               {t.contact.body}
+              <br />
+              <small>{t.contact.controller}</small>
             </div>
             <a href={`mailto:${t.contact.email}`}>
               <LinkIcon size={13} /> {t.contact.email}

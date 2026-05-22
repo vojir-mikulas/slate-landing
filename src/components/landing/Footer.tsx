@@ -12,6 +12,11 @@ export function Footer({ dict }: FooterProps) {
         <MarkStack size={14} />
         <Wordmark size={13} />
         <span style={{ marginLeft: 8, color: "var(--fg-faint)" }}>
+          <a href="https://vojir.io" target="_blank" rel="noopener noreferrer">
+            Mikuláš Vojíř
+          </a>
+          <span> </span>
+
           {dict.copyright}
         </span>
       </span>

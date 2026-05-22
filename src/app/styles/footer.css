@@ -27,6 +27,17 @@
 .footer__links a:hover {
     color: var(--fg);
 }
+.footer__brand a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 160ms ease, text-decoration-color 160ms ease;
+    text-decoration-color: transparent;
+}
+.footer__brand a:hover {
+    color: var(--fg);
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}
 
 @media (max-width: 560px) {
     .footer {

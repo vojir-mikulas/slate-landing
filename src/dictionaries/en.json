@@ -50,7 +50,7 @@
     "privacyLink": "privacy"
   },
   "privacy": {
-    "eyebrow": "Privacy · v0.1",
+    "eyebrow": "Privacy",
     "titleStart": "How Slate handles ",
     "titleAccent": "your memory.",
     "effective": "Effective May 22, 2026",
@@ -81,7 +81,7 @@
         "bullets": [
           {
             "strong": "Local first.",
-            "text": "Your saves are yours, stored in your browser, on your device. There is no \"cloud\" today."
+            "text": "Your saves are yours, stored in your browser, on your device. There is no hosted cloud today."
           },
           {
             "strong": "Minimum collection.",
@@ -92,8 +92,8 @@
             "text": "We do not run ads. We do not sell, rent, or share your saves with third parties."
           },
           {
-            "strong": "No training.",
-            "text": "We do not feed your saves into AI models — ours, or anyone else's."
+            "strong": "No AI training.",
+            "text": "We do not use your saves or personal data to train AI models."
           },
           {
             "strong": "Honest defaults.",
@@ -119,7 +119,7 @@
             "Browsing history outside saved items",
             "The contents of pages you didn't save",
             "Keystrokes, mouse movement, or screen recordings",
-            "Inferred interests, topics, or profiles"
+            "Inferred interests, topics, or behavioural profiles"
           ]
         }
       },
@@ -127,29 +127,40 @@
         "num": "03",
         "label": "Where your data lives",
         "p1Start": "Slate is built on a local-first architecture. Your library lives in ",
-        "p1End": " inside your browser. That copy is the source of truth — and the only copy.",
-        "p2": "There is no sync, no backend, and no shared server today. If that ever changes, it will be opt-in, clearly labelled, and described on this page before it ships.",
+        "p1End": " inside your browser. That copy is the source of truth — and the only copy today.",
+        "p2": "There is currently no hosted sync, backend account system, or shared cloud storage operated by Slate.",
         "p3": "Because your data is local, it may persist on your device even after you stop using Slate. You can wipe it at any time from Settings, or by clearing site data in your browser."
       },
       "analytics": {
         "num": "04",
         "label": "Analytics & tracking",
-        "p1": "We do not use analytics or tracking SDKs. We do not track your behaviour, usage patterns, or interactions inside the app. The marketing site you're reading right now sets no cookies and runs no third-party scripts beyond what's required to load Google Fonts."
+        "p1": "Slate does not use advertising, behavioural analytics, or tracking SDKs. We do not track your behaviour, usage patterns, or interactions inside the app.",
+        "p2": "The website does not use cookies for tracking or advertising purposes."
+      },
+      "integrations": {
+        "num": "05",
+        "label": "Optional integrations",
+        "p1": "In the future, Slate may support optional bring-your-own integrations such as personal sync providers, cloud storage, or AI services selected and connected by you.",
+        "p2": "These integrations will always be optional and clearly labelled before any data leaves your device.",
+        "p3": "If you choose to connect a third-party provider, the data required for that feature may be transmitted to that provider at your request.",
+        "p4": "The handling of your data by third-party providers is governed by their own privacy policies and practices.",
+        "p5": "Slate does not control or take responsibility for how third-party services process data you voluntarily choose to share with them."
       },
       "sharing": {
-        "num": "05",
+        "num": "06",
         "label": "Sharing & third parties",
-        "p1": "We do not sell or share your data with third parties. There's currently no payment processor, no AI provider, no hosted backend in the loop — because there's nothing for them to receive.",
-        "p2": "If we ever add a paid plan or shared features, we'll list every third party we work with here, including what they receive and why."
+        "p1": "We do not sell, rent, or share your data with advertisers or data brokers.",
+        "p2": "There is currently no payment processor, hosted backend, advertising network, or external AI provider receiving your saved content.",
+        "p3": "If third-party services are added in the future, we will clearly list what data they receive and why before those features are released."
       },
       "rights": {
-        "num": "06",
+        "num": "07",
         "label": "Your rights",
-        "intro": "Slate is built so that exercising these rights doesn't require an email — most of them are a button in Settings.",
+        "intro": "Slate is designed so that exercising your rights doesn't require an email — most of them are available directly in the app.",
         "bullets": [
           {
             "strong": "Export.",
-            "text": "Download all your saves as JSON or CSV, anytime."
+            "text": "Download all your saves as JSON or CSV at any time."
           },
           {
             "strong": "Delete.",
@@ -157,30 +168,32 @@
           },
           {
             "strong": "Access.",
-            "text": "Everything Slate knows about you is visible in the app — there's nothing held server-side."
+            "text": "Everything Slate knows about you is visible directly in the app."
           },
           {
             "strong": "Correct.",
             "text": "Edit any field on any save directly in the app."
           }
         ],
-        "closing": "If you're in the EU, UK, or California, you have these rights under GDPR, UK GDPR, and CCPA respectively. Since your data is stored locally, you can exercise them directly — but reach out if anything is unclear."
+        "closing": "If you're in the EU, UK, or California, you may have additional rights under GDPR, UK GDPR, or CCPA respectively. Since your data is primarily stored locally, many of these rights can be exercised directly by you."
       },
       "children": {
-        "num": "07",
+        "num": "08",
         "label": "Children",
-        "p1": "Slate is not directed at children under 13, or under 16 in the European Union where applicable. We don't knowingly collect data from anyone in that age range. If you believe we have, please contact us and we'll delete it."
+        "p1": "Slate is not directed at children under 13, or under 16 in the European Union where applicable. We do not knowingly collect personal data from children in those age groups."
       },
       "changes": {
-        "num": "08",
+        "num": "09",
         "label": "Changes to this policy",
-        "p1": "If we make significant changes — especially anything that expands what we collect — we'll update the date above and clearly communicate them. We do not expand data collection silently."
+        "p1": "If we make significant changes — especially changes that expand data collection or introduce external services — we will update the date above and clearly communicate those changes before they take effect.",
+        "p2": "We do not silently expand data collection."
       }
     },
     "contact": {
       "title": "Questions?",
       "body": "Plain prose, no ticket forms. Reach a human and we'll get back to you within a few days.",
-      "email": "hello@slate.app"
+      "email": "hello@slate.vojir.io",
+      "controller": "Data controller: Mikuláš Vojíř, Czech Republic."
     }
   }
 }

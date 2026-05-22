@@ -81,6 +81,7 @@ export function Hero({ dict, cardDict, itemsDict }: HeroProps) {
         <p className="hero__sub">{dict.subtitle}</p>
         <div className="hero__cta">
           <button type="button" className="btn btn--primary" onClick={saveOne}>
+            {dict.ctaSave}
             <Kbd>⌘S</Kbd>
           </button>
           <span className="hero__cta-note">
@@ -92,24 +93,23 @@ export function Hero({ dict, cardDict, itemsDict }: HeroProps) {
       <div className="hero__device">
         <HeroCard items={items} dict={cardDict} />
         <div className="qs-float" data-visible={toast || undefined}>
-          <div className="qs-toast">
-            <div className="qs-toast-check">
-              <CheckIcon size={13} />
-            </div>
-            <div className="qs-toast-main">
-              <div className="qs-toast-title">{dict.toastTitle}</div>
-              <div className="qs-toast-sub">{dict.toastSub}</div>
-            </div>
-            <div className="qs-toast-actions">
-              <button type="button" className="qs-link">
-                {dict.toastEdit}
-              </button>
-              <button type="button" className="qs-link" data-accent="">
-                {dict.toastUndo}
-              </button>
-            </div>
+          <div className="qs-float__check">
+            <CheckIcon size={13} />
           </div>
-          <span className="qs-progress" />
+          <div className="qs-float__body">
+            <div className="qs-float__title">{dict.toastTitle}</div>
+            <div className="qs-float__sub">{dict.toastSub}</div>
+          </div>
+          <span
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: 10.5,
+              color: "var(--fg-mute)",
+            }}
+          >
+            {dict.toastUndo}
+          </span>
+          <span className="qs-float__progress" />
         </div>
       </div>
     </section>
