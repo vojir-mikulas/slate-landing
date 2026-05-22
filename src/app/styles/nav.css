@@ -1,0 +1,101 @@
+/* Top navigation — sticky, blurred, with a borderless top state that grows a
+   hairline once the page scrolls. Theme toggle lives here too. */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    background: color-mix(in oklab, var(--bg) 80%, transparent);
+    border-bottom: 0.5px solid transparent;
+    transition:
+        border-color 200ms,
+        background 200ms;
+}
+.nav[data-scrolled="true"] {
+    border-bottom-color: var(--line);
+}
+.nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    height: 60px;
+}
+.nav__center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+.nav__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+.nav__link {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    padding: 7px 12px;
+    border-radius: var(--r-sm);
+    font: inherit;
+    font-size: 13px;
+    color: var(--fg-soft);
+    cursor: pointer;
+    transition:
+        background 120ms,
+        color 120ms;
+}
+.nav__link:hover {
+    background: var(--bg-hover);
+    color: var(--fg);
+}
+
+.theme-toggle {
+    appearance: none;
+    background: transparent;
+    border: 0.5px solid var(--line-strong);
+    width: 32px;
+    height: 32px;
+    border-radius: var(--r-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg-soft);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition:
+        background 140ms,
+        color 140ms,
+        border-color 140ms;
+}
+.theme-toggle:hover {
+    background: var(--bg-hover);
+    color: var(--fg);
+    border-color: var(--fg-faint);
+}
+.theme-toggle__icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        transform 380ms cubic-bezier(0.7, 0, 0.2, 1),
+        opacity 240ms;
+}
+.theme-toggle__icon[data-on="false"] {
+    transform: translateY(120%) rotate(40deg);
+    opacity: 0;
+}
+.theme-toggle__icon[data-on="true"] {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+}

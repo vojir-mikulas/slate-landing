@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import { hasLocale, locales } from "@/i18n/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +20,10 @@ export const metadata: Metadata = {
     "A calm buffer between browsing and forgetting. Save anything in one keystroke. Rediscover it naturally, when it matters again.",
 };
 
-// Resolve theme before first paint so the page never flashes the wrong palette.
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
 const themeBootstrap = `
 (function(){try{
   var stored = localStorage.getItem('slate-theme');
@@ -30,12 +35,16 @@ const themeBootstrap = `
 }})();
 `.trim();
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: LayoutProps<"/[lang]">) {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >

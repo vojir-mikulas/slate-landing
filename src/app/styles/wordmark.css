@@ -1,0 +1,19 @@
+/* Slate wordmark — text + accent dot. */
+
+.wm {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: baseline;
+}
+.wm__dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-left: 2px;
+    align-self: flex-end;
+    margin-bottom: 2px;
+}

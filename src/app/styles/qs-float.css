@@ -1,0 +1,83 @@
+/* The "Saved!" toast that animates in beside the hero card. Positions itself
+   relative to .hero__device; the [data-visible] flip drives both the slide-in
+   and the progress bar timing. */
+
+.qs-float {
+    position: absolute;
+    right: -32px;
+    top: 64px;
+    width: 280px;
+    background: var(--bg-elev);
+    border: 0.5px solid var(--line-strong);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 5;
+    transform: translateX(20px);
+    opacity: 0;
+    transition:
+        transform 480ms cubic-bezier(0.6, 0, 0.2, 1),
+        opacity 320ms;
+}
+.qs-float[data-visible="true"] {
+    transform: translateX(0);
+    opacity: 1;
+}
+.qs-float__check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-fg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.qs-float__body {
+    flex: 1;
+    min-width: 0;
+}
+.qs-float__title {
+    font-size: 12.5px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.qs-float__sub {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--fg-mute);
+    margin-top: 1px;
+}
+.qs-float__progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.5px;
+    background: var(--accent);
+    width: 0;
+    transition: width 2.4s linear;
+}
+.qs-float[data-visible="true"] .qs-float__progress {
+    width: 100%;
+}
+
+/* Responsive — pull the toast inside the viewport on narrow screens so it
+   never crosses the page edge. */
+@media (max-width: 1024px) {
+    .qs-float {
+        right: 0;
+    }
+}
+@media (max-width: 720px) {
+    .qs-float {
+        width: min(280px, calc(100% - 16px));
+        right: 8px;
+    }
+}

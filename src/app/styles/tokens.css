@@ -1,0 +1,77 @@
+/* Design tokens — colors, shadows, radii, font families.
+   Dark theme is opt-in via [data-theme="dark"] on a parent element. */
+
+:root {
+    /* Light theme — warm-cool neutrals */
+    --bg: #fafaf9;
+    --bg-elev: #ffffff;
+    --bg-soft: #f4f4f3;
+    --bg-hover: rgba(15, 17, 22, 0.04);
+    --bg-active: rgba(15, 17, 22, 0.07);
+    --line: rgba(15, 17, 22, 0.07);
+    --line-strong: rgba(15, 17, 22, 0.12);
+    --fg: #1c1c1f;
+    --fg-soft: #4a4a52;
+    --fg-mute: #8a8a92;
+    --fg-faint: #b8b8c0;
+
+    --accent-hue: 252;
+    --accent-c: 0.13;
+    --accent-l-light: 0.58;
+    --accent-l-dark: 0.72;
+    --accent: oklch(var(--accent-l-light) var(--accent-c) var(--accent-hue));
+    --accent-bg: oklch(
+        var(--accent-l-light) var(--accent-c) var(--accent-hue) / 0.1
+    );
+    --accent-fg: oklch(0.96 0.02 var(--accent-hue));
+
+    --shadow-sm:
+        0 1px 2px rgba(15, 17, 22, 0.04), 0 0 0 0.5px rgba(15, 17, 22, 0.05);
+    --shadow-md:
+        0 2px 6px rgba(15, 17, 22, 0.06),
+        0 12px 32px -8px rgba(15, 17, 22, 0.14),
+        0 0 0 0.5px rgba(15, 17, 22, 0.08);
+    --shadow-lg:
+        0 18px 60px -12px rgba(15, 17, 22, 0.22),
+        0 0 0 0.5px rgba(15, 17, 22, 0.1);
+
+    --r-sm: 6px;
+    --r-md: 8px;
+    --r-lg: 12px;
+    --r-xl: 16px;
+
+    /* Bind UI/mono families to the next/font CSS variables emitted by layout.tsx. */
+    --font-ui:
+        var(--font-geist-sans), ui-sans-serif, -apple-system, system-ui,
+        sans-serif;
+    --font-mono:
+        var(--font-geist-mono), ui-monospace, "JetBrains Mono", SFMono-Regular,
+        Menlo, monospace;
+}
+
+[data-theme="dark"] {
+    --bg: #0c0c0e;
+    --bg-elev: #141417;
+    --bg-soft: #1a1a1d;
+    --bg-hover: rgba(255, 255, 255, 0.04);
+    --bg-active: rgba(255, 255, 255, 0.07);
+    --line: rgba(255, 255, 255, 0.06);
+    --line-strong: rgba(255, 255, 255, 0.12);
+    --fg: #ebebef;
+    --fg-soft: #a8a8b2;
+    --fg-mute: #6e6e78;
+    --fg-faint: #46464e;
+    --accent: oklch(var(--accent-l-dark) var(--accent-c) var(--accent-hue));
+    --accent-bg: oklch(
+        var(--accent-l-dark) var(--accent-c) var(--accent-hue) / 0.16
+    );
+    --accent-fg: oklch(0.18 0.04 var(--accent-hue));
+    --shadow-sm:
+        0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 0.5px rgba(255, 255, 255, 0.04);
+    --shadow-md:
+        0 2px 6px rgba(0, 0, 0, 0.3), 0 16px 36px -8px rgba(0, 0, 0, 0.5),
+        0 0 0 0.5px rgba(255, 255, 255, 0.06);
+    --shadow-lg:
+        0 24px 80px -12px rgba(0, 0, 0, 0.6),
+        0 0 0 0.5px rgba(255, 255, 255, 0.08);
+}

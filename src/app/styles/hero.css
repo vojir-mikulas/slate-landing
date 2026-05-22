@@ -1,0 +1,151 @@
+/* Hero block — two-column layout (copy + device slot) that stacks on tablets.
+   Owns the eyebrow pulse animation; the device slot is sized here so the
+   slate-card and floating toast can position absolutely inside it. */
+
+.hero {
+    position: relative;
+    padding: 90px 0 110px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: center;
+}
+.hero__copy {
+    position: relative;
+    max-width: 540px;
+}
+
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 28px;
+    padding: 0 11px 0 7px;
+    border-radius: 999px;
+    background: var(--bg-soft);
+    border: 0.5px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--fg-soft);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+.hero__eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px
+        oklch(var(--accent-l-light) var(--accent-c) var(--accent-hue) / 0.18);
+    animation: slate-pulse 2.4s ease-in-out infinite;
+}
+[data-theme="dark"] .hero__eyebrow-dot {
+    box-shadow: 0 0 0 3px
+        oklch(var(--accent-l-dark) var(--accent-c) var(--accent-hue) / 0.2);
+}
+@keyframes slate-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.35;
+    }
+}
+
+.hero__title {
+    font-size: clamp(44px, 6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    margin: 22px 0 22px;
+    text-wrap: balance;
+}
+.hero__title .accent-period {
+    color: var(--accent);
+}
+.hero__title em {
+    font-style: normal;
+    color: var(--fg-soft);
+    font-weight: 500;
+}
+
+.hero__sub {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--fg-soft);
+    max-width: 460px;
+    text-wrap: pretty;
+}
+.hero__cta {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.hero__cta-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--fg-mute);
+    margin-left: 4px;
+}
+
+/* Device slot — sized here, contents (slate-card, qs-float) styled in their
+   own partials. */
+.hero__device {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 480px;
+    margin-left: auto;
+    perspective: 1200px;
+}
+
+/* Responsive — stack the hero columns, recenter and resize the device slot,
+   then tighten typography on the smallest screens. */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 72px 0 88px;
+        gap: 56px;
+    }
+    .hero__device {
+        height: 460px;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 720px) {
+    .hero {
+        padding: 56px 0 72px;
+        gap: 44px;
+    }
+    .hero__title {
+        font-size: clamp(40px, 8vw, 56px);
+    }
+    .hero__device {
+        height: 440px;
+        max-width: 100%;
+    }
+}
+@media (max-width: 560px) {
+    .hero {
+        padding: 40px 16px 60px;
+        gap: 36px;
+    }
+    .hero__cta {
+        gap: 10px;
+    }
+    .hero__cta-note {
+        margin-left: 0;
+    }
+}
+@media (max-width: 380px) {
+    .hero__device {
+        height: 420px;
+    }
+}

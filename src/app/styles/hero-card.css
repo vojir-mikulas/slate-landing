@@ -1,0 +1,187 @@
+/* The slate-card device mock — header, tabs, and the saved-link list with its
+   incoming-item animation. Sized by .hero__device (see hero.css). */
+
+.slate-card {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: var(--bg-elev);
+    border: 0.5px solid var(--line-strong);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.slate-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 0.5px solid var(--line);
+}
+.slate-card__head-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: -0.025em;
+}
+.slate-card__head-meta {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--fg-mute);
+}
+.slate-card__tabs {
+    display: flex;
+    gap: 0;
+    padding: 0 10px;
+    border-bottom: 0.5px solid var(--line);
+}
+.slate-card__tab {
+    position: relative;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--fg-mute);
+}
+.slate-card__tab[data-active="true"] {
+    color: var(--fg);
+}
+.slate-card__tab[data-active="true"]::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -0.5px;
+    height: 1.5px;
+    background: var(--accent);
+    border-radius: 1.5px;
+}
+
+.slate-card__list {
+    padding: 4px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.lc-group-label {
+    padding: 14px 14px 6px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-faint);
+    font-weight: 500;
+}
+.lc-item {
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 0.5px solid var(--line);
+    position: relative;
+    transition:
+        background 100ms,
+        transform 360ms cubic-bezier(0.7, 0, 0.2, 1),
+        opacity 360ms;
+}
+.lc-item[data-incoming="true"] {
+    animation: lc-incoming 520ms cubic-bezier(0.6, 0, 0.2, 1) backwards;
+}
+@keyframes lc-incoming {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(0.98);
+        background: var(--accent-bg);
+    }
+    60% {
+        opacity: 1;
+        background: var(--accent-bg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.lc-item:hover {
+    background: var(--bg-hover);
+}
+.lc-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: var(--bg-soft);
+    border: 0.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 10.5px;
+    color: var(--fg-soft);
+    overflow: hidden;
+}
+.lc-thumb[data-tone="indigo"] {
+    background: oklch(0.92 0.04 252);
+    color: oklch(0.4 0.12 252);
+}
+[data-theme="dark"] .lc-thumb[data-tone="indigo"] {
+    background: oklch(0.3 0.06 252);
+    color: oklch(0.82 0.06 252);
+}
+.lc-thumb[data-tone="yt"] {
+    background: oklch(0.62 0.2 18);
+    color: #fff;
+}
+.lc-thumb[data-tone="gh"] {
+    background: #0d0d0f;
+    color: #fafaf9;
+}
+[data-theme="dark"] .lc-thumb[data-tone="gh"] {
+    background: #f4f4f3;
+    color: #0d0d0f;
+}
+.lc-thumb[data-tone="green"] {
+    background: oklch(0.65 0.13 145);
+    color: #fff;
+}
+.lc-thumb[data-tone="amber"] {
+    background: oklch(0.78 0.13 80);
+    color: #1c1c1f;
+}
+.lc-thumb[data-tone="rose"] {
+    background: oklch(0.65 0.18 25);
+    color: #fff;
+}
+.lc-thumb[data-tone="blue"] {
+    background: oklch(0.55 0.16 235);
+    color: #fff;
+}
+
+.lc-main {
+    min-width: 0;
+}
+.lc-title {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    color: var(--fg);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lc-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 3px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--fg-mute);
+}
+.lc-time {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--fg-faint);
+}

@@ -47,7 +47,7 @@ export function HeroCard({ items }: HeroCardProps) {
           className="slate-card__head-meta"
           style={{ whiteSpace: "nowrap" }}
         >
-          128 saves
+          67 saves
         </span>
       </div>
       <div className="slate-card__tabs">

@@ -1,0 +1,90 @@
+/* Landing page shell — the full-bleed background grid, the cursor-follow glow,
+   and the centered content column. */
+
+.lp {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-ui);
+    isolation: isolate;
+}
+
+.lp__glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(
+        600px circle at var(--mx, 50%) var(--my, 30%),
+        oklch(var(--accent-l-light) var(--accent-c) var(--accent-hue) / 0.1),
+        transparent 60%
+    );
+    transition: background 200ms linear;
+}
+[data-theme="dark"] .lp__glow {
+    background: radial-gradient(
+        600px circle at var(--mx, 50%) var(--my, 30%),
+        oklch(var(--accent-l-dark) var(--accent-c) var(--accent-hue) / 0.16),
+        transparent 60%
+    );
+}
+
+.lp__grid {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(
+        circle at 1px 1px,
+        var(--line-strong) 0.5px,
+        transparent 0
+    );
+    background-size: 24px 24px;
+    background-position: center center;
+    opacity: 0.5;
+    mask-image: radial-gradient(
+        ellipse 80% 50% at 50% 30%,
+        #000 30%,
+        transparent 75%
+    );
+    -webkit-mask-image: radial-gradient(
+        ellipse 80% 50% at 50% 30%,
+        #000 30%,
+        transparent 75%
+    );
+}
+
+.lp__wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* Responsive — side padding tightens as the viewport shrinks. */
+@media (max-width: 1024px) {
+    .lp__wrap {
+        padding: 0 40px;
+    }
+}
+@media (max-width: 900px) {
+    .lp__wrap {
+        padding: 0 32px;
+    }
+}
+@media (max-width: 720px) {
+    .lp__wrap {
+        padding: 0 28px;
+    }
+}
+@media (max-width: 560px) {
+    .lp__wrap {
+        padding: 0 24px;
+    }
+}
+@media (max-width: 380px) {
+    .lp__wrap {
+        padding: 0 20px;
+    }
+}

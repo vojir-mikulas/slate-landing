@@ -1,0 +1,52 @@
+/* Generic section spacing + the centered closing block at the end of the
+   landing page. */
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.section + .section {
+    border-top: 0.5px solid var(--line);
+}
+
+.close {
+    text-align: center;
+    padding: 130px 0 100px;
+}
+.close__title {
+    font-size: clamp(44px, 6vw, 68px);
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    line-height: 1.02;
+    margin: 0 auto;
+    max-width: 760px;
+    text-wrap: balance;
+}
+.close__title em {
+    font-style: normal;
+    color: var(--fg-soft);
+    font-weight: 500;
+}
+.close__sub {
+    margin: 22px auto 0;
+    font-size: 17px;
+    color: var(--fg-soft);
+    max-width: 480px;
+    line-height: 1.55;
+    text-wrap: pretty;
+}
+.close__cta {
+    margin-top: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 560px) {
+    .section {
+        padding: 70px 0;
+    }
+    .close {
+        padding: 90px 0 70px;
+    }
+}
