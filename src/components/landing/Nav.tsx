@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { Brand } from "./Brand";
 import { MarkStack } from "./Mark";
 import { MoonIcon, SunIcon } from "./icons";
@@ -9,9 +10,10 @@ import type { Theme } from "./useTheme";
 type NavProps = {
   theme: Theme;
   toggleTheme: () => void;
+  dict: Dictionary["nav"];
 };
 
-export function Nav({ theme, toggleTheme }: NavProps) {
+export function Nav({ theme, toggleTheme, dict }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,13 +26,13 @@ export function Nav({ theme, toggleTheme }: NavProps) {
   return (
     <nav className="nav" data-scrolled={scrolled || undefined}>
       <div className="lp__wrap nav__inner">
-        <Brand />
+        <Brand homeLabel={dict.brandHome} />
         <div className="nav__center">
           <button
             type="button"
             className="theme-toggle"
             onClick={toggleTheme}
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+            aria-label={theme === "light" ? dict.themeToDark : dict.themeToLight}
             suppressHydrationWarning
           >
             <span
@@ -53,7 +55,7 @@ export function Nav({ theme, toggleTheme }: NavProps) {
             href="#get"
             style={{ marginLeft: 6 }}
           >
-            <MarkStack size={13} /> Add to browser
+            <MarkStack size={13} /> {dict.addToBrowser}
           </a>
         </div>
       </div>

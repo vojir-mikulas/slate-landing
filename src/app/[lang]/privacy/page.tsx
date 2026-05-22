@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PrivacyPage } from "@/components/landing/PrivacyPage";
 import { hasLocale } from "@/i18n/config";
+import { getDictionary } from "../dictionaries";
 
-export const metadata: Metadata = {
-  title: "Slate — Privacy",
-  description:
-    "How Slate handles your memory. Local-first by default, no tracking, always exportable.",
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/privacy">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const dict = await getDictionary(lang);
+  return {
+    title: dict.metadata.privacyTitle,
+    description: dict.metadata.privacyDescription,
+  };
+}
 
 export default async function Privacy({
   params,
@@ -15,5 +22,6 @@ export default async function Privacy({
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
 
-  return <PrivacyPage />;
+  const dict = await getDictionary(lang);
+  return <PrivacyPage dict={dict} />;
 }

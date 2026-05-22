@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
@@ -13,12 +12,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "Slate — The internet, remembered",
-  description:
-    "A calm buffer between browsing and forgetting. Save anything in one keystroke. Rediscover it naturally, when it matters again.",
-};
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));

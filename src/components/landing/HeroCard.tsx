@@ -1,3 +1,4 @@
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 import { MarkStack } from "./Mark";
 
 export type HeroItem = {
@@ -12,9 +13,10 @@ export type HeroItem = {
 
 type HeroCardProps = {
   items: HeroItem[];
+  dict: Dictionary["heroCard"];
 };
 
-export function HeroCard({ items }: HeroCardProps) {
+export function HeroCard({ items, dict }: HeroCardProps) {
   return (
     <div className="slate-card">
       <div className="slate-card__head">
@@ -47,12 +49,12 @@ export function HeroCard({ items }: HeroCardProps) {
           className="slate-card__head-meta"
           style={{ whiteSpace: "nowrap" }}
         >
-          67 saves
+          {dict.savesCount}
         </span>
       </div>
       <div className="slate-card__tabs">
         <span className="slate-card__tab" data-active="true">
-          Queue{" "}
+          {dict.tabQueue}{" "}
           <span
             style={{
               fontFamily: "var(--font-mono)",
@@ -64,10 +66,10 @@ export function HeroCard({ items }: HeroCardProps) {
             {items.length}
           </span>
         </span>
-        <span className="slate-card__tab">Saved</span>
+        <span className="slate-card__tab">{dict.tabSaved}</span>
       </div>
       <div className="slate-card__list">
-        <div className="lc-group-label">Today</div>
+        <div className="lc-group-label">{dict.groupToday}</div>
         {items.map((it, i) => (
           <div
             key={it.key ?? `${it.title}-${i}`}

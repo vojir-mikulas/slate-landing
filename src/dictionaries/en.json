@@ -1,1 +1,185 @@
-{}
+{
+  "metadata": {
+    "landingTitle": "Slate — The internet, remembered",
+    "landingDescription": "A calm buffer between browsing and forgetting. Save anything in one keystroke. Rediscover it naturally, when it matters again.",
+    "privacyTitle": "Slate — Privacy",
+    "privacyDescription": "How Slate handles your memory. Local-first by default, no tracking, always exportable."
+  },
+  "nav": {
+    "brandHome": "Slate home",
+    "themeToLight": "Switch to light theme",
+    "themeToDark": "Switch to dark theme",
+    "addToBrowser": "Add to browser"
+  },
+  "hero": {
+    "eyebrow": "v0.67.3 — public beta is open",
+    "titleStart": "The internet, ",
+    "titleAccent": "remembered",
+    "subtitle": "Slate is a calm buffer between browsing and forgetting. Save anything in one keystroke. Rediscover it naturally, when it matters again.",
+    "ctaSave": "Try saving a link",
+    "ctaWatch": "Watch the demo",
+    "ctaNote": "Captures in one keystroke. No accounts. No backlog.",
+    "toastTitle": "Saved to your slate",
+    "toastSub": "inkandswitch.com · queued",
+    "toastUndo": "Undo"
+  },
+  "heroCard": {
+    "savesCount": "67 saves",
+    "tabQueue": "Queue",
+    "tabSaved": "Saved",
+    "groupToday": "Today"
+  },
+  "heroItems": {
+    "initial": [
+      "rauchg / next.js — discussion #58219",
+      "How Linear thinks about engineering velocity",
+      "On craft and the cost of caring too much",
+      "Pricing teardown of 14 dev tools"
+    ],
+    "incoming": "Local-first software — the new old way"
+  },
+  "closingCta": {
+    "titleStart": "You can safely ",
+    "titleAccent": "close this tab now.",
+    "sub": "Slate will remember it for you. Free forever for capture, search, and archive.",
+    "cta": "Add Slate to your browser"
+  },
+  "footer": {
+    "copyright": "© 2026 — Proudly made in Czech Republic 🇨🇿",
+    "privacyLink": "privacy"
+  },
+  "privacy": {
+    "eyebrow": "Privacy · v0.1",
+    "titleStart": "How Slate handles ",
+    "titleAccent": "your memory.",
+    "effective": "Effective May 22, 2026",
+    "lastUpdated": "Last updated May 22, 2026",
+    "lede": "Slate is built on a simple premise: the things you save are yours. By default, your data stays on your device and we collect as little as possible — today, that's nothing at all.",
+    "pledge": {
+      "local": {
+        "title": "Local by default",
+        "sub": "Your saves live in your browser. Nothing is shipped to any server we run."
+      },
+      "noTracking": {
+        "title": "No tracking",
+        "sub": "No analytics SDKs, no cookies, no behavioural data. We don't watch you use Slate."
+      },
+      "exportable": {
+        "title": "Always exportable",
+        "sub": "Your saves belong to you. One click to clean JSON or CSV — no lock-in, no holdout."
+      }
+    },
+    "toc": {
+      "label": "On this page"
+    },
+    "sections": {
+      "principles": {
+        "num": "01",
+        "label": "Principles",
+        "intro": "Slate is built on a small number of opinions that constrain every product decision below.",
+        "bullets": [
+          {
+            "strong": "Local first.",
+            "text": "Your saves are yours, stored in your browser, on your device. There is no \"cloud\" today."
+          },
+          {
+            "strong": "Minimum collection.",
+            "text": "If we don't need a piece of data to make Slate work for you, we don't collect it."
+          },
+          {
+            "strong": "No advertising.",
+            "text": "We do not run ads. We do not sell, rent, or share your saves with third parties."
+          },
+          {
+            "strong": "No training.",
+            "text": "We do not feed your saves into AI models — ours, or anyone else's."
+          },
+          {
+            "strong": "Honest defaults.",
+            "text": "Privacy-friendly settings are the defaults. We don't dark-pattern you out of them."
+          }
+        ]
+      },
+      "collect": {
+        "num": "02",
+        "label": "What we collect",
+        "intro": "By default, we do not collect or process your data. Slate does not require an account, does not phone home, and does not run analytics on this website.",
+        "onDevice": {
+          "label": "On your device",
+          "items": [
+            "URLs and titles of pages you save",
+            "Tags, notes, and collections you create",
+            "Timestamps and which list an item is in"
+          ]
+        },
+        "neverCollected": {
+          "label": "Never collected",
+          "items": [
+            "Browsing history outside saved items",
+            "The contents of pages you didn't save",
+            "Keystrokes, mouse movement, or screen recordings",
+            "Inferred interests, topics, or profiles"
+          ]
+        }
+      },
+      "storage": {
+        "num": "03",
+        "label": "Where your data lives",
+        "p1Start": "Slate is built on a local-first architecture. Your library lives in ",
+        "p1End": " inside your browser. That copy is the source of truth — and the only copy.",
+        "p2": "There is no sync, no backend, and no shared server today. If that ever changes, it will be opt-in, clearly labelled, and described on this page before it ships.",
+        "p3": "Because your data is local, it may persist on your device even after you stop using Slate. You can wipe it at any time from Settings, or by clearing site data in your browser."
+      },
+      "analytics": {
+        "num": "04",
+        "label": "Analytics & tracking",
+        "p1": "We do not use analytics or tracking SDKs. We do not track your behaviour, usage patterns, or interactions inside the app. The marketing site you're reading right now sets no cookies and runs no third-party scripts beyond what's required to load Google Fonts."
+      },
+      "sharing": {
+        "num": "05",
+        "label": "Sharing & third parties",
+        "p1": "We do not sell or share your data with third parties. There's currently no payment processor, no AI provider, no hosted backend in the loop — because there's nothing for them to receive.",
+        "p2": "If we ever add a paid plan or shared features, we'll list every third party we work with here, including what they receive and why."
+      },
+      "rights": {
+        "num": "06",
+        "label": "Your rights",
+        "intro": "Slate is built so that exercising these rights doesn't require an email — most of them are a button in Settings.",
+        "bullets": [
+          {
+            "strong": "Export.",
+            "text": "Download all your saves as JSON or CSV, anytime."
+          },
+          {
+            "strong": "Delete.",
+            "text": "Wipe your local library from Settings, or clear site data in your browser."
+          },
+          {
+            "strong": "Access.",
+            "text": "Everything Slate knows about you is visible in the app — there's nothing held server-side."
+          },
+          {
+            "strong": "Correct.",
+            "text": "Edit any field on any save directly in the app."
+          }
+        ],
+        "closing": "If you're in the EU, UK, or California, you have these rights under GDPR, UK GDPR, and CCPA respectively. Since your data is stored locally, you can exercise them directly — but reach out if anything is unclear."
+      },
+      "children": {
+        "num": "07",
+        "label": "Children",
+        "p1": "Slate is not directed at children under 13, or under 16 in the European Union where applicable. We don't knowingly collect data from anyone in that age range. If you believe we have, please contact us and we'll delete it."
+      },
+      "changes": {
+        "num": "08",
+        "label": "Changes to this policy",
+        "p1": "If we make significant changes — especially anything that expands what we collect — we'll update the date above and clearly communicate them. We do not expand data collection silently."
+      }
+    },
+    "contact": {
+      "title": "Questions?",
+      "body": "Plain prose, no ticket forms. Reach a human and we'll get back to you within a few days.",
+      "email": "hello@slate.app"
+    }
+  }
+}
