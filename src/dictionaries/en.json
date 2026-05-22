@@ -191,7 +191,7 @@
     "contact": {
       "title": "Questions?",
       "body": "Plain prose, no ticket forms. Reach a human and we'll get back to you within a few days.",
-      "email": "hello@slate.vojir.io",
+      "email": "hello.slate@vojir.io",
       "controller": "Data controller: Mikuláš Vojíř, Czech Republic."
     }
   },
@@ -306,7 +306,7 @@
     "contact": {
       "title": "Questions?",
       "body": "Plain prose, no ticket forms. Reach a human and we'll get back to you within a few days.",
-      "email": "hello@slate.app",
+      "email": "hello.slate@vojir.io",
       "controller": "Mikuláš Vojíř, Czech Republic."
     },
     "closing": "These Terms apply to the Slate browser extension and associated services."
