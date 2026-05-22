@@ -31,16 +31,19 @@ export function Nav({ theme, toggleTheme }: NavProps) {
             className="theme-toggle"
             onClick={toggleTheme}
             aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+            suppressHydrationWarning
           >
             <span
               className="theme-toggle__icon"
               data-on={theme === "light" ? "true" : "false"}
+              suppressHydrationWarning
             >
               <MoonIcon size={14} />
             </span>
             <span
               className="theme-toggle__icon"
               data-on={theme === "dark" ? "true" : "false"}
+              suppressHydrationWarning
             >
               <SunIcon size={14} />
             </span>
