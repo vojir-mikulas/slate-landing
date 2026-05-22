@@ -366,6 +366,17 @@
     opacity: 0.9;
 }
 
+.priv__closing {
+    margin: 32px 0 0;
+    padding-top: 18px;
+    border-top: 0.5px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: var(--fg-mute);
+    text-align: center;
+}
+
 @media (max-width: 900px) {
     .priv__pledge {
         grid-template-columns: 1fr;

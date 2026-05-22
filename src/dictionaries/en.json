@@ -3,7 +3,9 @@
     "landingTitle": "Slate — The internet, remembered",
     "landingDescription": "A calm buffer between browsing and forgetting. Save anything in one keystroke. Rediscover it naturally, when it matters again.",
     "privacyTitle": "Slate — Privacy",
-    "privacyDescription": "How Slate handles your memory. Local-first by default, no tracking, always exportable."
+    "privacyDescription": "How Slate handles your memory. Local-first by default, no tracking, always exportable.",
+    "termsTitle": "Slate — Terms of Use",
+    "termsDescription": "The terms that govern your use of the Slate browser extension."
   },
   "nav": {
     "brandHome": "Slate home",
@@ -47,7 +49,8 @@
   },
   "footer": {
     "copyright": "© 2026 — Proudly made in Czech Republic 🇨🇿",
-    "privacyLink": "privacy"
+    "privacyLink": "privacy",
+    "termsLink": "terms"
   },
   "privacy": {
     "eyebrow": "Privacy",
@@ -55,7 +58,7 @@
     "titleAccent": "your memory.",
     "effective": "Effective May 22, 2026",
     "lastUpdated": "Last updated May 22, 2026",
-    "lede": "Slate is built on a simple premise: the things you save are yours. By default, your data stays on your device and we collect as little as possible — today, that's nothing at all.",
+    "lede": "Slate is built on a simple premise: the things you save are yours. By default, your data stays on your device and we collect as little as possible.",
     "pledge": {
       "local": {
         "title": "Local by default",
@@ -104,7 +107,7 @@
       "collect": {
         "num": "02",
         "label": "What we collect",
-        "intro": "By default, we do not collect or process your data. Slate does not require an account, does not phone home, and does not run analytics on this website.",
+        "intro": "By default, we do not collect or process your data. Slate does not require an account and does not run analytics on this website.",
         "onDevice": {
           "label": "On your device",
           "items": [
@@ -135,7 +138,7 @@
         "num": "04",
         "label": "Analytics & tracking",
         "p1": "Slate does not use advertising, behavioural analytics, or tracking SDKs. We do not track your behaviour, usage patterns, or interactions inside the app.",
-        "p2": "The website does not use cookies for tracking or advertising purposes."
+        "p2": "This website does not use cookies for tracking or advertising purposes."
       },
       "integrations": {
         "num": "05",
@@ -169,10 +172,6 @@
           {
             "strong": "Access.",
             "text": "Everything Slate knows about you is visible directly in the app."
-          },
-          {
-            "strong": "Correct.",
-            "text": "Edit any field on any save directly in the app."
           }
         ],
         "closing": "If you're in the EU, UK, or California, you may have additional rights under GDPR, UK GDPR, or CCPA respectively. Since your data is primarily stored locally, many of these rights can be exercised directly by you."
@@ -195,5 +194,121 @@
       "email": "hello@slate.vojir.io",
       "controller": "Data controller: Mikuláš Vojíř, Czech Republic."
     }
+  },
+  "terms": {
+    "eyebrow": "Legal · v0.1",
+    "titleStart": "Terms of ",
+    "titleAccent": "Use",
+    "effective": "Effective May 22, 2026",
+    "lastUpdated": "Last updated May 22, 2026",
+    "lede": "Please read these terms carefully before using Slate. By installing or using the extension, you agree to these Terms of Use.",
+    "toc": {
+      "label": "On this page"
+    },
+    "sections": {
+      "acceptance": {
+        "num": "01",
+        "label": "Acceptance of terms",
+        "p1": "By accessing or using Slate, you confirm that you agree to these Terms of Use. If you do not agree, do not use the extension."
+      },
+      "service": {
+        "num": "02",
+        "label": "Description of service",
+        "p1": "Slate is a browser extension designed to help you save, organise, and rediscover information from the web.",
+        "p2": "Unless stated otherwise, Slate is provided free of charge."
+      },
+      "browserStore": {
+        "num": "03",
+        "label": "Browser platform terms",
+        "p1": "Your use of Slate must comply with the terms and policies of the browser platform or extension marketplace through which you install it, including the Google Chrome Web Store where applicable.",
+        "p2": "This agreement is between you and Mikuláš Vojíř (\"developer\", \"we\", \"us\"), not Google."
+      },
+      "localFirst": {
+        "num": "04",
+        "label": "Local-first operation",
+        "p1": "Slate is designed to operate locally by default. Your saved data primarily lives in your browser storage on your device.",
+        "p2": "You are responsible for maintaining backups of any important data. Browser storage may be cleared, corrupted, or removed outside our control."
+      },
+      "futureFeatures": {
+        "num": "05",
+        "label": "Optional online features",
+        "p1": "Some current or future features may require an internet connection or optional third-party services.",
+        "p2": "Future features may include optional sync providers, cloud storage, AI integrations, or shared functionality.",
+        "p3": "These features will always be optional and explicitly enabled by you."
+      },
+      "thirdParties": {
+        "num": "06",
+        "label": "Third-party services",
+        "p1": "If you choose to connect third-party services such as cloud providers or AI tools, you acknowledge that your data may be transmitted to those providers at your request.",
+        "p2": "The handling of your data by those services is governed by their own terms and privacy policies.",
+        "p3": "Slate does not control and is not responsible for how third-party providers process, store, or use data you voluntarily share with them."
+      },
+      "ownership": {
+        "num": "07",
+        "label": "Ownership of content",
+        "p1": "All data and content you save using Slate remains your property.",
+        "p2": "We do not claim ownership of your saves, notes, links, or collections."
+      },
+      "acceptableUse": {
+        "num": "08",
+        "label": "Acceptable use",
+        "p1": "You agree to use Slate only for lawful purposes and in a manner that does not harm the extension, its infrastructure, or other users.",
+        "p2": "You may not misuse the extension for malicious activity, abuse browser APIs, or attempt to interfere with the normal operation of the service."
+      },
+      "availability": {
+        "num": "09",
+        "label": "Availability",
+        "p1": "Slate is provided on an \"as available\" basis.",
+        "p2": "We do not guarantee uninterrupted availability, compatibility with all browsers, or error-free operation."
+      },
+      "ai": {
+        "num": "10",
+        "label": "AI features",
+        "p1": "If AI-powered features are introduced in the future, they may generate inaccurate, incomplete, or unexpected results.",
+        "p2": "AI-generated output is provided for convenience only and should not be relied upon as factual, legal, medical, financial, or professional advice."
+      },
+      "warranties": {
+        "num": "11",
+        "label": "Disclaimer of warranties",
+        "p1": "Slate is provided \"as is\" without warranties of any kind, express or implied."
+      },
+      "liability": {
+        "num": "12",
+        "label": "Limitation of liability",
+        "p1": "To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or data-loss damages arising from your use of Slate.",
+        "p2": "We are not responsible for lost saves, browser storage failures, extension conflicts, third-party outages, or issues caused by external integrations.",
+        "p3": "Our total liability is limited to the amount you paid for Slate, if any."
+      },
+      "termination": {
+        "num": "13",
+        "label": "Termination",
+        "p1": "You may stop using Slate at any time by uninstalling the extension or clearing its local data.",
+        "p2": "We may modify, suspend, or discontinue parts of the extension at our discretion."
+      },
+      "changes": {
+        "num": "14",
+        "label": "Changes to these terms",
+        "p1": "We may update these Terms from time to time.",
+        "p2": "Continued use of Slate after changes become effective means you accept the updated Terms."
+      },
+      "age": {
+        "num": "15",
+        "label": "Age requirements",
+        "p1": "Slate is not intended for users under 13, or under 16 in the European Union where applicable."
+      },
+      "law": {
+        "num": "16",
+        "label": "Governing law",
+        "p1": "These Terms are governed by the laws of the Czech Republic.",
+        "p2": "Any disputes are subject to the courts of Prague, Czech Republic."
+      }
+    },
+    "contact": {
+      "title": "Questions?",
+      "body": "Plain prose, no ticket forms. Reach a human and we'll get back to you within a few days.",
+      "email": "hello@slate.app",
+      "controller": "Mikuláš Vojíř, Czech Republic."
+    },
+    "closing": "These Terms apply to the Slate browser extension and associated services."
   }
 }

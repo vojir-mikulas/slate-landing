@@ -22,6 +22,7 @@ export function Footer({ dict }: FooterProps) {
       </span>
       <span className="footer__links">
         <a href="/privacy">{dict.privacyLink}</a>
+        <a href="/terms">{dict.termsLink}</a>
       </span>
     </footer>
   );
