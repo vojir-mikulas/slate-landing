@@ -16,7 +16,12 @@ const INITIAL_ITEM_DATA: Omit<HeroItem, "title">[] = [
   { thumb: "GH", tone: "gh", domain: "github.com", time: "34m" },
   { thumb: "YT", tone: "yt", domain: "youtube.com · 24:18", time: "1h" },
   { thumb: "H", tone: "indigo", domain: "works.hey.com · 7 min", time: "2h" },
-  { thumb: "P", tone: "green", domain: "pragmaticengineer.com · 14 min", time: "5h" },
+  {
+    thumb: "P",
+    tone: "green",
+    domain: "pragmaticengineer.com · 14 min",
+    time: "5h",
+  },
 ];
 
 const INCOMING_ITEM_DATA: Omit<HeroItem, "title"> = {
@@ -79,9 +84,6 @@ export function Hero({ dict, cardDict, itemsDict }: HeroProps) {
             <MarkStack size={14} /> {dict.ctaSave}
             <Kbd>⌘S</Kbd>
           </button>
-          <a className="btn btn--ghost" href="#get">
-            {dict.ctaWatch}
-          </a>
           <span className="hero__cta-note">
             <CheckIcon size={11} /> {dict.ctaNote}
           </span>
