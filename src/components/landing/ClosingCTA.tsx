@@ -15,9 +15,12 @@ export function ClosingCTA({ dict }: ClosingCTAProps) {
         </h2>
         <p className="close__sub">{dict.sub}</p>
         <div className="close__cta">
-          <button type="button" className="btn btn--primary">
+          <a
+            href="https://chromewebstore.google.com/detail/slate/lacbdmnaejmfhbcelnmndbhndcgcpodi"
+            className="btn btn--primary"
+          >
             <MarkStack size={14} /> {dict.cta}
-          </button>
+          </a>
         </div>
       </div>
     </section>

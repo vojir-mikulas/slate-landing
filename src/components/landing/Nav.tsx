@@ -32,7 +32,9 @@ export function Nav({ theme, toggleTheme, dict }: NavProps) {
             type="button"
             className="theme-toggle"
             onClick={toggleTheme}
-            aria-label={theme === "light" ? dict.themeToDark : dict.themeToLight}
+            aria-label={
+              theme === "light" ? dict.themeToDark : dict.themeToLight
+            }
             suppressHydrationWarning
           >
             <span
@@ -52,7 +54,7 @@ export function Nav({ theme, toggleTheme, dict }: NavProps) {
           </button>
           <a
             className="btn btn--primary"
-            href="#get"
+            href="https://chromewebstore.google.com/detail/slate/lacbdmnaejmfhbcelnmndbhndcgcpodi"
             style={{ marginLeft: 6 }}
           >
             <MarkStack size={13} /> {dict.addToBrowser}
